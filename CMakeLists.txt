@@ -3,4 +3,4 @@ project(eightpuzzle)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(eightpuzzle main.cpp display.h)
+add_executable(eightpuzzle main.cpp header/display.h)
