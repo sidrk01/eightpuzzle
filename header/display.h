@@ -65,6 +65,7 @@ const int impossible[N][N] = {{1, 2, 3},
                                  {4, 5, 6},
                                  {8, 7, 0,}};
 
+//change values for different goal
 int goal_state[N][N] = {{1, 2, 3},
                         {4, 5, 6},
                         {7, 8, 0}};

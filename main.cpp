@@ -3,6 +3,7 @@
 #include <algorithm>
 #include "header/display.h"
 #include "header/problem.h"
+#include "header/node.h"
 
 using namespace std;
 int main() {
@@ -26,6 +27,24 @@ int main() {
 
         //creates problem space
         Problem problem(user_puzzle, goal_state);
+        //NODE TESTS:
+        Node node(problem);
+        node.print_result();
+        cout << "\nSliding Node Right:\n";
+        node.slide_right();
+        node.print_result();
+        cout << "\nSliding Node Left:\n";
+        node.slide_left();
+        node.print_result();
+        cout << "\nSliding Node Up:\n";
+        node.slide_up();
+        node.print_result();
+        cout << "\nSliding Node Down:\n";
+        node.print_result();
+
+        cout << "\nNode goal-matching:\n";
+        cout << node.goal_test();
+
         cout << border;
 
         cout << proceed; //reset puzzle
