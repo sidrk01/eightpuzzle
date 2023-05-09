@@ -2,6 +2,7 @@
 #include <string>
 #include <algorithm>
 #include "header/display.h"
+#include "header/problem.h"
 
 using namespace std;
 int main() {
@@ -23,6 +24,8 @@ int main() {
         cout << algo; //allows for choice of algorithm
         cin >> user_choice;
 
+        //creates problem space
+        Problem problem(user_puzzle, goal_state);
         cout << border;
 
         cout << proceed; //reset puzzle
