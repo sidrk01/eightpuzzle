@@ -2,7 +2,7 @@
 // Created by sidha on 5/9/2023.
 //
 
-#include "header/node.h"
+#include "../header/node.h"
 
 Node::Node() { //initialize with empty values
     state = "";

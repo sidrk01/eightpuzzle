@@ -4,6 +4,7 @@
 #include "header/display.h"
 #include "header/problem.h"
 #include "header/node.h"
+#include "header/searchalgos.h"
 
 using namespace std;
 int main() {
@@ -25,26 +26,10 @@ int main() {
         cout << algo; //allows for choice of algorithm
         cin >> user_choice;
 
-        //creates problem space
-        Problem problem(user_puzzle, goal_state);
-        //NODE TESTS:
-        Node node(problem);
-        node.print_result();
-        cout << "\nSliding Node Right:\n";
-        node.slide_right();
-        node.print_result();
-        cout << "\nSliding Node Left:\n";
-        node.slide_left();
-        node.print_result();
-        cout << "\nSliding Node Up:\n";
-        node.slide_up();
-        node.print_result();
-        cout << "\nSliding Node Down:\n";
-        node.print_result();
+        Problem problem(user_puzzle, goal_state); //creates problem to be solved
+        SearchAlgos search(problem, user_choice);
 
-        cout << "\nNode goal-matching:\n";
-        cout << node.goal_test();
-
+        search.graph_search();
         cout << border;
 
         cout << proceed; //reset puzzle

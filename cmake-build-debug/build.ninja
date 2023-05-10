@@ -55,11 +55,17 @@ build CMakeFiles/eightpuzzle.dir/main.cpp.obj: CXX_COMPILER__eightpuzzle_Debug C
   OBJECT_DIR = CMakeFiles\eightpuzzle.dir
   OBJECT_FILE_DIR = CMakeFiles\eightpuzzle.dir
 
-build CMakeFiles/eightpuzzle.dir/node.cpp.obj: CXX_COMPILER__eightpuzzle_Debug C$:/Users/sidha/CLionProjects/eightpuzzle/node.cpp || cmake_object_order_depends_target_eightpuzzle
-  DEP_FILE = CMakeFiles\eightpuzzle.dir\node.cpp.obj.d
+build CMakeFiles/eightpuzzle.dir/src/node.cpp.obj: CXX_COMPILER__eightpuzzle_Debug C$:/Users/sidha/CLionProjects/eightpuzzle/src/node.cpp || cmake_object_order_depends_target_eightpuzzle
+  DEP_FILE = CMakeFiles\eightpuzzle.dir\src\node.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\eightpuzzle.dir
-  OBJECT_FILE_DIR = CMakeFiles\eightpuzzle.dir
+  OBJECT_FILE_DIR = CMakeFiles\eightpuzzle.dir\src
+
+build CMakeFiles/eightpuzzle.dir/src/searchalgos.cpp.obj: CXX_COMPILER__eightpuzzle_Debug C$:/Users/sidha/CLionProjects/eightpuzzle/src/searchalgos.cpp || cmake_object_order_depends_target_eightpuzzle
+  DEP_FILE = CMakeFiles\eightpuzzle.dir\src\searchalgos.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\eightpuzzle.dir
+  OBJECT_FILE_DIR = CMakeFiles\eightpuzzle.dir\src
 
 
 # =============================================================================
@@ -69,7 +75,7 @@ build CMakeFiles/eightpuzzle.dir/node.cpp.obj: CXX_COMPILER__eightpuzzle_Debug C
 #############################################
 # Link the executable eightpuzzle.exe
 
-build eightpuzzle.exe: CXX_EXECUTABLE_LINKER__eightpuzzle_Debug CMakeFiles/eightpuzzle.dir/main.cpp.obj CMakeFiles/eightpuzzle.dir/node.cpp.obj
+build eightpuzzle.exe: CXX_EXECUTABLE_LINKER__eightpuzzle_Debug CMakeFiles/eightpuzzle.dir/main.cpp.obj CMakeFiles/eightpuzzle.dir/src/node.cpp.obj CMakeFiles/eightpuzzle.dir/src/searchalgos.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\eightpuzzle.dir
