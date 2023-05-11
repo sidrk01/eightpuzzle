@@ -103,13 +103,13 @@ vector<Node> SearchAlgos::expand(Node& curr) {
             default:
                 break;
         }
-
+        //increments cost to match algorithm and sets other values
         if (explored_set.count(temp.state) == 0) {
             ++temp.g_cost;
             ++temp.depth;
             temp.set_heuristic(algo_choice);
             list.push_back(temp);
-            explored_set.insert(temp.state);
+            explored_set.insert(temp.state); //adds node to the explored set
         }
     }
 

@@ -39,7 +39,7 @@ public:
     bool goal_test();
     void set_heuristic(int choice);
     int misplaced_tile(); //counts misplaced tiles
-    double manhattan_distance(); //calculates euclidean distance
+    int manhattan_distance(); //calculates manhattan distance
 };
 
 #endif //EIGHTPUZZLE_NODE_H

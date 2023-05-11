@@ -117,6 +117,7 @@ void Node::set_heuristic(int choice) {
 int Node::misplaced_tile() {
     int misplaced_tiles = 0;
     string goal_string = puzzle_string(goal);
+    //checks tiles of current puzzle against goal using strings
     for (unsigned i = 0; i < goal_string.size(); i++){
         if ((state.at(i) != 0) && (state.at(i) != goal_string.at(i)))
             misplaced_tiles += 1;
@@ -124,8 +125,38 @@ int Node::misplaced_tile() {
     return misplaced_tiles;
 }
 
-double Node::manhattan_distance() {
-    //TODO: define manhattan distance heuristic
+int Node::manhattan_distance() {
+        int total_count = 0;
+        for (int num = 1; num < puzzle_string(this->puzzle).size(); num++) {
+            int node_r, node_c, goal_r, goal_c;
+            bool node_set = false;
+            bool goal_set = false;
+
+            //coordinates of the current number in the node and goal states
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (this->puzzle[i][j] == num) {
+                        node_r = i;
+                        node_c = j;
+                        node_set = true;
+                    }
+                    if (this->goal[i][j] == num) {
+                        goal_r = i;
+                        goal_c = j;
+                        goal_set = true;
+                    }
+                    if (goal_set && node_set) {
+                        break;
+                    }
+                }
+                if (goal_set && node_set) {
+                    break;
+                }
+            }
+            //distance obtained from goal vs current positions
+            total_count += (abs(goal_r - node_r) + abs(goal_c - node_c));
+        }
+        return total_count;
 }
 
 void Node::print_result() {
