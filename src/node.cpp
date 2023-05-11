@@ -115,7 +115,13 @@ void Node::set_heuristic(int choice) {
 }
 
 int Node::misplaced_tile() {
-    //TODO: define misplaced tile heuristic
+    int misplaced_tiles = 0;
+    string goal_string = puzzle_string(goal);
+    for (unsigned i = 0; i < goal_string.size(); i++){
+        if ((state.at(i) != 0) && (state.at(i) != goal_string.at(i)))
+            misplaced_tiles += 1;
+    }
+    return misplaced_tiles;
 }
 
 double Node::manhattan_distance() {

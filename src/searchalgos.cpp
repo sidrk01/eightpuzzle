@@ -33,19 +33,19 @@ void SearchAlgos::graph_search() {
 
         if(temp.goal_test()){ //if a node contains a goal state then return the corresponding solution
             temp.print_result(); //prints output of search
-            cout << "GOAL!!!" << endl;
-            cout << nodes_expand << size_nodes << " nodes." << endl;
-            cout << node_queue_max << frontier_size << endl;
+            cout << "Goal state!" << endl << endl;
             cout << node_goal_depth << temp.depth << endl;
+            cout << nodes_expand << size_nodes << endl;
+            cout << node_queue_max << frontier_size << endl;
             return;
         }
 
         //prints "trace" of expanded nodes (comment out for faster execution time)
-        if (frontier_size > 1) {
-            cout << "The best state to expand with g(n) = " << temp.g_cost  << " and h(n) = " << temp.h_cost << " is..." << endl;
-        }
-        temp.print_result();
-        cout <<"expanding this node..." << endl << endl;
+//        if (frontier_size > 1) {
+//            cout << "The best state to expand with g(n) = " << temp.g_cost  << " and h(n) = " << temp.h_cost << " is..." << endl;
+//        }
+//        temp.print_result();
+//        cout <<"expanding this node..." << endl << endl;
 
         list = expand(temp); //expand the chosen node
         explored_set.insert(head.state); //add to first node to explored set

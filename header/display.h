@@ -15,7 +15,7 @@ int user_puzzle[N][N];
 const string welcome = "Welcome to my CS205 8-puzzle solver. Type '1' to use a default puzzle. or '2' to enter your own puzzle.\n";
 const string puzzle_enter = "Enter your puzzle, use a zero to represent the blank. Please only use valid 8-puzzles.\nEnter the puzzle with spaces in between the tiles. Hit 'enter' only when finished.\n";
 const string invalid = "An invalid response has been entered. Default is selected.\n";
-const string algo = "Enter your choice of algorithm\n[1] Uniform Cost Search.\n[2] A* with  Misplaced Tile heuristic.\n[3] A* with  Manhattan Distance Heuristic.\n";
+const string algo = "Enter your choice of algorithm\n[1] Uniform Cost Search.\n[2] A* with Misplaced Tile heuristic.\n[3] A* with Manhattan Distance Heuristic.\n";
 const string proceed = "Would you like to try another puzzle?\nHit 'y' to continue or 'n' to quit.\n";
 const string default_choice = "Select the desired level of difficulty for your puzzle\n[1] no_moves\n[2] one_move\n[3] two_moves\n[4] three_moves\n[5] sixteen_moves\n[6] twenty_two_moves\n[7] twenty_three_moves\n[8] max_moves\n";
 const string border = "========================================================================================================================";

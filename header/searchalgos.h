@@ -13,9 +13,9 @@
 #include "Problem.h"
 #include "Node.h"
 
-const string nodes_expand = "To solve this problem the search algorithm expanded a total of ";
-const string node_queue_max = "The maximum number of nodes in the queue at any one time: ";
-const string node_goal_depth = "The depth of the goal node was: ";
+const string nodes_expand = "Number of nodes expanded: ";
+const string node_queue_max = "Maximum queue size:  ";
+const string node_goal_depth = "The depth of the solution: ";
 
 using namespace std;
 
